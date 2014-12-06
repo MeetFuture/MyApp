@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<server>
+		<title>mina服务</title>
+		<servername>MinaServer</servername>
+		<enable>true</enable>
+	</server>
+	
+	<server>
+		<title>Socket服务</title>
+		<servername>SocketServer</servername>
+		<enable>true</enable>
+	</server>
+</root>

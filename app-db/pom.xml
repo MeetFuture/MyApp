@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>app-parents</artifactId>
+		<groupId>com.tangqiang.app</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.tangqiang.app</groupId>
+	<artifactId>app-db</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- -->
+	<properties>
+		<jdbc.url>
+			<![CDATA[jdbc:mysql://localhost:3306/phonediary?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=utf-8]]>
+		</jdbc.url>
+		<jdbc.username>root</jdbc.username>
+		<jdbc.password>617288</jdbc.password>
+		<jdbc.driverClassName>com.mysql.jdbc.Driver</jdbc.driverClassName>
+		<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
+		<hibernate.show_sql>true</hibernate.show_sql>
+		<hibernate.transaction.factory_class>
+			org.hibernate.transaction.JDBCTransactionFactory
+		</hibernate.transaction.factory_class>
+		<hibernate.hbm2ddl.auto>create</hibernate.hbm2ddl.auto>
+	</properties>
+	<dependencies>
+
+		<dependency>
+			<groupId>com.mysql</groupId>
+			<artifactId>com.mysql</artifactId>
+			<version>5.1.15</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+
+		<!-- hibernate 相关 -->
+		<dependency>
+			<groupId>org.hibernate.annotations</groupId>
+			<artifactId>org.hibernate.annotations</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>org.hibernate</artifactId>
+			<version>3.2.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>3.2.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.9.0.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>transaction-api</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.persistence</groupId>
+			<artifactId>persistence-api</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>3.1</version>
+		</dependency>
+
+	</dependencies>
+</project>
