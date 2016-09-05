@@ -14,9 +14,6 @@ import org.hibernate.Query;
 import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
-import org.hibernate.cfg.Configuration;
-import org.springframework.stereotype.Component;
 
 import com.tangqiang.db.base.entity.IFilter;
 import com.tangqiang.db.base.entity.util.IFilterParser;

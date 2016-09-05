@@ -2,7 +2,7 @@ package com.tangqiang.db.base.test;
 
 import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;
-import org.springframework.test.AbstractTransactionalSpringContextTests;
+import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
 
 /**
  * hibernate 数据库测试类 (protected 方法会在运行 TestCase 时自动调用)
@@ -13,7 +13,7 @@ import org.springframework.test.AbstractTransactionalSpringContextTests;
  * @package com.tangqiang.db.base.test
  */
 @SuppressWarnings("deprecation")
-public class HibernateTestCase extends AbstractTransactionalSpringContextTests {
+public class HibernateTestCase extends AbstractTransactionalJUnit4SpringContextTests {
 	private Logger logger = Logger.getLogger(HibernateTestCase.class);
 
 	/** 测试的 spring 配置文件路径 */
@@ -31,8 +31,6 @@ public class HibernateTestCase extends AbstractTransactionalSpringContextTests {
 	
 	protected void prepareTestInstance() throws Exception {
 		logger.debug("设置测试的spring bean注入方式: AUTOWIRE_BY_NAME");
-		setAutowireMode(AbstractTransactionalSpringContextTests.AUTOWIRE_BY_NAME);
-		super.prepareTestInstance();
 	}
 
 	protected void flush() {
